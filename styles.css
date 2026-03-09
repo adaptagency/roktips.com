@@ -200,15 +200,23 @@ a {
   flex-wrap: wrap;
 }
 
+.launch-banner__logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
 .launch-banner__logo {
   height: 28px;
   width: auto;
   max-width: 100px;
   min-width: 60px;
   object-fit: contain;
-  flex-shrink: 0;
   display: block;
-  filter: brightness(0) invert(1);
 }
 
 .launch-banner__text {
