@@ -270,6 +270,24 @@ a {
   opacity: 1;
 }
 
+/* Small screens: offer runs full width so it wraps to ~2 lines inside the banner */
+@media (max-width: 767px) {
+  .launch-banner__inner {
+    flex-wrap: wrap;
+    padding-right: 2.5rem;
+  }
+  .launch-banner__text {
+    position: static;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.15rem 0.5rem 0 0;
+    flex: 0 0 100%;
+    text-align: center;
+  }
+}
+
 @media (min-width: 768px) {
   .launch-banner__inner {
     padding: 0.75rem 2rem;
