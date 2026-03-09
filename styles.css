@@ -198,16 +198,18 @@ a {
   gap: 0.75rem 1rem;
   position: relative;
   flex-wrap: wrap;
+  padding-right: 2.5rem; /* space for dismiss button */
 }
 
 .launch-banner__logo-wrap {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--white);
-  padding: 0.25rem 0.5rem;
+  background: #fff;
+  padding: 0.35rem 0.6rem;
   border-radius: 6px;
   flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 .launch-banner__logo {
@@ -221,7 +223,9 @@ a {
 
 .launch-banner__text {
   margin: 0;
+  flex: 1;
   text-align: center;
+  min-width: 0;
 }
 
 .launch-banner__badge {
