@@ -72,7 +72,7 @@
   var revealElements = document.querySelectorAll(revealSelector);
 
   if (revealElements.length && 'IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
+    var observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
@@ -90,17 +90,16 @@
       observer.observe(el);
     });
   } else {
-    // No IntersectionObserver: show all on load
     revealElements.forEach(function (el) {
       el.classList.add('is-visible');
     });
   }
 
-  // --- Smooth scroll for anchor links (enhance native behavior) ---
+  // --- Smooth scroll for anchor links ---
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    const href = anchor.getAttribute('href');
+    var href = anchor.getAttribute('href');
     if (href === '#') return;
-    const target = document.querySelector(href);
+    var target = document.querySelector(href);
     if (target) {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
