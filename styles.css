@@ -223,9 +223,13 @@ a {
 
 .launch-banner__text {
   margin: 0;
-  flex: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
-  min-width: 0;
+  padding: 0 3rem; /* avoid overlap with logo and dismiss */
+  max-width: calc(100% - 8rem);
+  box-sizing: border-box;
 }
 
 .launch-banner__badge {
