@@ -53,8 +53,8 @@
   // --- Video: play overlay → embed ---
   var videoTrigger = document.getElementById('video-trigger');
   var videoEmbed = document.getElementById('video-embed');
-  // Replace with your YouTube video ID (e.g. dQw4w9WgXcQ)
-  var YOUTUBE_VIDEO_ID = 'dQw4w9WgXcQ';
+  // YouTube video: https://youtu.be/Y_FrEuYZ6Yo
+  var YOUTUBE_VIDEO_ID = 'Y_FrEuYZ6Yo';
 
   if (videoTrigger && videoEmbed) {
     videoTrigger.addEventListener('click', function (e) {
