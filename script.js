@@ -60,7 +60,7 @@
     videoTrigger.addEventListener('click', function (e) {
       e.preventDefault();
       var iframe = videoEmbed.querySelector('iframe');
-      if (!iframe || iframe.src) return;
+      if (!iframe) return;
       iframe.src = 'https://www.youtube.com/embed/' + YOUTUBE_VIDEO_ID + '?autoplay=1';
       videoEmbed.hidden = false;
       videoTrigger.hidden = true;
