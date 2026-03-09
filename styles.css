@@ -270,21 +270,22 @@ a {
   opacity: 1;
 }
 
-/* Small screens: offer runs full width so it wraps to ~2 lines inside the banner */
+/* Small screens: logo and offer on same row; offer wraps to 2 lines beside logo */
 @media (max-width: 767px) {
   .launch-banner__inner {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding-right: 2.5rem;
   }
   .launch-banner__text {
     position: static;
     left: auto;
     transform: none;
-    width: 100%;
-    max-width: 100%;
-    padding: 0.15rem 0.5rem 0 0;
-    flex: 0 0 100%;
-    text-align: center;
+    width: auto;
+    max-width: none;
+    padding: 0 0.5rem 0 0;
+    flex: 1;
+    min-width: 0;
+    text-align: left;
   }
 }
 
