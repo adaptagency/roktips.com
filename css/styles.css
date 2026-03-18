@@ -70,7 +70,8 @@ a {
   position: fixed;
   top: 0.75rem;
   right: 0.75rem;
-  z-index: 220;
+  /* Above banners/bars, below modals */
+  z-index: 150;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -140,6 +141,17 @@ a {
   .lang-toggle {
     top: 0.6rem;
     right: 0.6rem;
+  }
+}
+
+/* When offer banner is present, drop toggle below it */
+body.has-banner .lang-toggle {
+  top: calc(48px + 0.75rem);
+}
+
+@media (max-width: 767px) {
+  body.has-banner .lang-toggle {
+    top: calc(48px + 0.6rem);
   }
 }
 
@@ -397,6 +409,11 @@ a {
 
 .sticky-buy.is-visible {
   transform: translateY(0);
+}
+
+/* On desktop/tablet, keep sticky bar below offer banner */
+body.has-banner .sticky-buy {
+  top: 48px;
 }
 
 /* Mobile: floating bar at bottom, full-width buttons */
