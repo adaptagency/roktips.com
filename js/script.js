@@ -173,7 +173,7 @@
       'privacy.rightsText': 'Bạn có thể yêu cầu truy cập, chỉnh sửa, xóa dữ liệu hoặc hủy nhận thông tin marketing bất cứ lúc nào.',
       'privacy.contactTitle': 'Liên hệ',
       'privacy.contactText':
-        'Để yêu cầu liên quan đến quyền riêng tư, hãy liên hệ <a class="legal__link" href="mailto:hello@example.com">hello@example.com</a>.',
+        'Để yêu cầu liên quan đến quyền riêng tư, hãy liên hệ <a class="legal__link" href="mailto:anthony@roktips.com">anthony@roktips.com</a>.',
 
       'terms.metaTitle': 'Điều khoản sử dụng – RokTips',
       'terms.metaDescription': 'Điều khoản sử dụng của RokTips.',
@@ -199,7 +199,15 @@
       'terms.changesText': 'Chúng tôi có thể cập nhật điều khoản theo thời gian bằng cách đăng phiên bản mới trên trang này.',
       'terms.contactTitle': 'Liên hệ',
       'terms.contactText':
-        'Có câu hỏi về điều khoản? Email <a class="legal__link" href="mailto:hello@example.com">hello@example.com</a>.',
+        'Có câu hỏi về điều khoản? Email <a class="legal__link" href="mailto:anthony@roktips.com">anthony@roktips.com</a>.',
+
+      // Footer
+      'footer.copy': '© roktips.com. Bảo lưu mọi quyền.',
+      'footer.b2b': 'Khách mua sỉ (B2B)?',
+      'footer.privacy': 'Quyền riêng tư',
+      'footer.terms': 'Điều khoản',
+      'footer.linksAria': 'Liên kết chân trang',
+      'footer.backToTopAria': 'Lên đầu trang',
 
       // Common
       'common.watchVideo': 'Xem video',
@@ -347,39 +355,39 @@
       'privacy.metaTitle': 'Privacy Policy – RokTips',
       'privacy.metaDescription': 'Privacy Policy for RokTips.',
       'privacy.title': 'Privacy Policy',
-      'privacy.introTitle': 'What this policy covers',
+      'privacy.introTitle': 'What This Policy Covers',
       'privacy.introText': 'This policy explains what information we collect, why we collect it, and how we use it.',
-      'privacy.collectTitle': 'Information we collect',
+      'privacy.collectTitle': 'Information We Collect',
       'privacy.collect1': 'Contact details you provide (such as name, email, and phone number).',
       'privacy.collect2': 'Preferred messaging app (WhatsApp or Zalo) if you opt in to phone updates.',
       'privacy.collect3':
         'Basic technical data sent by your browser (such as user agent and the page URL) to help us prevent spam and diagnose issues.',
-      'privacy.useTitle': 'How we use your information',
+      'privacy.useTitle': 'How We Use Your Information',
       'privacy.use1': 'To contact you about the RokTips launch, availability, and related offers.',
       'privacy.use2': 'To respond to your requests and questions.',
       'privacy.use3': 'To improve our marketing and website experience.',
       'privacy.purchaseTitle': 'Purchases',
       'privacy.purchaseText':
         'Purchases are completed on third‑party platforms (for example Shopify or TikTok Shop). We don’t process payment details on this website.',
-      'privacy.sharingTitle': 'Sharing',
+      'privacy.sharingTitle': 'Sharing Your Information',
       'privacy.sharingText':
         'We do not sell your personal information. We may share it with service providers who help us collect and store leads (for example, form and spreadsheet tools), only for the purposes described above.',
       'privacy.retentionTitle': 'Retention',
       'privacy.retentionText':
         'We keep your information only as long as needed for marketing and launch communications, or as required by law.',
-      'privacy.rightsTitle': 'Your choices',
+      'privacy.rightsTitle': 'Your Choices',
       'privacy.rightsText':
         'You can request access, correction, or deletion of your information, or opt out of marketing messages at any time.',
       'privacy.contactTitle': 'Contact',
       'privacy.contactText':
-        'To make a privacy request, contact us at <a class="legal__link" href="mailto:hello@example.com">hello@example.com</a>.',
+        'To make a privacy request, contact us at <a class="legal__link" href="mailto:anthony@roktips.com">anthony@roktips.com</a>.',
 
       'terms.metaTitle': 'Terms of Use – RokTips',
       'terms.metaDescription': 'Terms of Use for RokTips.',
       'terms.title': 'Terms of Use',
       'terms.acceptTitle': 'Acceptance',
       'terms.acceptText': 'By using this website, you agree to these Terms of Use.',
-      'terms.infoTitle': 'Information only',
+      'terms.infoTitle': 'Information Only',
       'terms.infoText':
         'Content on this website is provided for general information and marketing purposes. It is not medical advice.',
       'terms.eligibilityTitle': 'Eligibility',
@@ -387,22 +395,30 @@
       'terms.purchasesTitle': 'Purchases',
       'terms.purchasesText':
         'Purchases are completed on third‑party platforms (for example Shopify or TikTok Shop). Their terms and policies apply.',
-      'terms.linksTitle': 'Third‑party links',
+      'terms.linksTitle': 'Third‑Party Links',
       'terms.linksText':
         'This website may link to third‑party sites. We are not responsible for their content or practices.',
-      'terms.ipTitle': 'Intellectual property',
+      'terms.ipTitle': 'Intellectual Property',
       'terms.ipText':
         'All content on this website is owned by RokTips or its licensors and may not be copied without permission.',
       'terms.disclaimerTitle': 'Disclaimer',
       'terms.disclaimerText': 'This website is provided “as is” without warranties of any kind, to the fullest extent permitted by law.',
-      'terms.liabilityTitle': 'Limitation of liability',
+      'terms.liabilityTitle': 'Limitation of Liability',
       'terms.liabilityText':
         'RokTips will not be liable for any indirect or consequential damages arising from your use of this website.',
       'terms.changesTitle': 'Changes',
       'terms.changesText': 'We may update these terms from time to time by posting a new version on this page.',
       'terms.contactTitle': 'Contact',
       'terms.contactText':
-        'Questions about these terms? Email <a class="legal__link" href="mailto:hello@example.com">hello@example.com</a>.',
+        'Questions about these terms? Email <a class="legal__link" href="mailto:anthony@roktips.com">anthony@roktips.com</a>.',
+
+      // Footer
+      'footer.copy': '© roktips.com. All rights reserved.',
+      'footer.b2b': 'B2B Buyer?',
+      'footer.privacy': 'Privacy',
+      'footer.terms': 'Terms',
+      'footer.linksAria': 'Footer links',
+      'footer.backToTopAria': 'Back to top',
 
       // Common
       'common.watchVideo': 'Watch Video',
@@ -662,10 +678,20 @@
   // --- Interest registration modal ---
   var modal = document.getElementById('interest-modal');
   var openButtons = document.querySelectorAll('.js-open-register');
+  var openB2BButtons = document.querySelectorAll('.js-open-b2b');
   var closeSelectors = '[data-modal-close]';
+  var interestType = 'consumer';
 
   function openModal() {
     if (!modal) return;
+    interestType = 'consumer';
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+  }
+
+  function openB2BModal() {
+    if (!modal) return;
+    interestType = 'b2b';
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
   }
@@ -674,6 +700,7 @@
     if (!modal) return;
     modal.classList.remove('is-open');
     modal.setAttribute('aria-hidden', 'true');
+    interestType = 'consumer';
   }
 
   if (modal && openButtons.length) {
@@ -713,7 +740,10 @@
         var emailVal = email ? email.value.trim() : '';
         var phoneRawVal = phone ? phone.value.trim() : '';
 
-        var phoneHasDigits = /\d/.test(phoneRawVal);
+        // Treat the default "+84" (or any bare country code like "+1") as "no phone provided".
+        // This avoids forcing a channel selection when the user only enters name + email.
+        var phoneIsOnlyCountryCode = /^\+\d{1,4}\s*$/.test(phoneRawVal);
+        var phoneHasDigits = /\d/.test(phoneRawVal) && !phoneIsOnlyCountryCode;
         var hasContact = emailVal !== '' || phoneHasDigits;
 
         if (!hasContact) {
@@ -751,9 +781,10 @@
         // - If user enters a full international number (starts with +), extract country code.
         // - Otherwise assume Vietnam +84 and treat the input as local/national number.
         var DEFAULT_COUNTRY_CODE = '+84';
-        var phoneCountryVal = DEFAULT_COUNTRY_CODE;
+        var phoneCountryVal = '';
         var phoneVal = '';
         if (phoneHasDigits) {
+          phoneCountryVal = DEFAULT_COUNTRY_CODE;
           var raw = phoneRawVal.replace(/\s+/g, ' ').trim();
           if (raw.charAt(0) === '+') {
             var match = raw.match(/^(\+\d{1,4})\s*(.*)$/);
@@ -774,9 +805,12 @@
         var formData = new URLSearchParams();
         formData.append('first_name', firstNameVal);
         formData.append('email', emailVal);
-        formData.append('phone_country', phoneCountryVal);
-        formData.append('phone', phoneVal);
+        if (phoneHasDigits) {
+          formData.append('phone_country', phoneCountryVal);
+          formData.append('phone', phoneVal);
+        }
         formData.append('channel', channelVal);
+        formData.append('message', interestType === 'b2b' ? 'B2B' : 'B2C');
         formData.append('user_agent', navigator.userAgent);
         formData.append('page', window.location.href);
 
@@ -817,5 +851,14 @@
           });
       });
     }
+  }
+
+  if (modal && openB2BButtons.length) {
+    openB2BButtons.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        openB2BModal();
+      });
+    });
   }
 })();

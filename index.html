@@ -281,14 +281,21 @@
   </main>
 
   <!-- 10. Footer -->
-  <footer class="footer" id="contact">
+  <footer class="footer" id="footer">
     <div class="container">
-      <nav class="footer__nav" aria-label="Footer">
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-        <a href="https://shopify-link-placeholder" class="js-open-register" target="_blank" rel="noopener">Buy</a>
-      </nav>
-      <p class="footer__copy">© RokTips. Build guitar finger strength anywhere.</p>
+      <div class="footer__inner">
+        <p class="footer__copy" data-i18n="footer.copy">© roktips.com. All rights reserved.</p>
+        <nav class="footer__links" aria-label="Footer links" data-i18n-aria="footer.linksAria">
+          <a class="footer__link js-open-b2b" href="#contact" data-i18n="footer.b2b">B2B Buyer?</a>
+          <a class="footer__link" href="privacy.html" data-i18n="footer.privacy">Privacy</a>
+          <a class="footer__link" href="terms.html" data-i18n="footer.terms">Terms</a>
+        </nav>
+        <a class="footer__top" href="#hero" aria-label="Back to top" data-i18n-aria="footer.backToTopAria">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 5l7 7-1.4 1.4L13 8.8V20h-2V8.8L6.4 13.4 5 12l7-7z" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </footer>
 
