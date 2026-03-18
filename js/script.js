@@ -243,7 +243,7 @@
         'Stay connected to your instrument anywhere with a pocket‑sized fingertip trainer that builds strength, calluses, and control.',
       'hero.urgency': 'Free shipping on every RÖKTIPS order — delivered straight to your door.',
       'hero.feature1': 'Beginners build calluses faster',
-      'hero.feature2': 'Practice strength drills without a guitar',
+      'hero.feature2': 'Practise strength drills without a guitar',
       'hero.feature3': 'Quick warm‑ups before you play',
 
       // Social proof
