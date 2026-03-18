@@ -1,5 +1,5 @@
 /**
- * RokTips lead capture endpoint (Google Apps Script)
+ * RÖKTIPS lead capture endpoint (Google Apps Script)
  *
  * Sheet columns expected (in this order):
  * Timestamp | First name | Email | Phone country | Phone | Channel | Message | User agent | Page
