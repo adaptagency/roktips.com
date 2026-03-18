@@ -204,8 +204,8 @@
       // Footer
       'footer.copy': '© roktips.com. Bảo lưu mọi quyền.',
       'footer.b2b': 'Khách mua sỉ (B2B)?',
-      'footer.privacy': 'Quyền riêng tư',
-      'footer.terms': 'Điều khoản',
+      'footer.privacy': 'Chính sách quyền riêng tư',
+      'footer.terms': 'Điều khoản sử dụng',
       'footer.linksAria': 'Liên kết chân trang',
       'footer.backToTopAria': 'Lên đầu trang',
 
@@ -415,8 +415,8 @@
       // Footer
       'footer.copy': '© roktips.com. All rights reserved.',
       'footer.b2b': 'B2B Buyer?',
-      'footer.privacy': 'Privacy',
-      'footer.terms': 'Terms',
+      'footer.privacy': 'Privacy Policy',
+      'footer.terms': 'Terms of Use',
       'footer.linksAria': 'Footer links',
       'footer.backToTopAria': 'Back to top',
 
@@ -810,7 +810,9 @@
           formData.append('phone', phoneVal);
         }
         formData.append('channel', channelVal);
-        formData.append('message', interestType === 'b2b' ? 'B2B' : 'B2C');
+        // Default to B2C unless the modal was explicitly opened via the B2B link.
+        var messageVal = interestType === 'b2b' ? 'B2B' : 'B2C';
+        formData.append('message', messageVal);
         formData.append('user_agent', navigator.userAgent);
         formData.append('page', window.location.href);
 
