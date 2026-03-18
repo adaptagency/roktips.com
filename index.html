@@ -1,35 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RokTips – For guitarists and other string players who want stronger fingers, faster. Build calluses, strength, and dexterity anywhere so you can play longer with less pain.">
-  <title>RokTips – Stronger Fingers for Guitarists & String Players</title>
+  <meta name="description" data-i18n-content="doc.description" content="RokTips – For guitarists and other string players who want stronger fingers, faster. Build calluses, strength, and dexterity anywhere so you can play longer with less pain.">
+  <title data-i18n="doc.title">RokTips – Stronger Fingers for Guitarists & String Players</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=4">
 </head>
 <body>
+  <!-- Language toggle -->
+  <div class="lang-toggle" aria-label="Language selector" data-i18n-aria="lang.aria">
+    <span class="lang-toggle__flag" aria-hidden="true" title="Tiếng Việt" data-i18n-title="lang.vnTitle">🇻🇳</span>
+    <label class="lang-toggle__switch">
+      <input type="checkbox" class="lang-toggle__input" id="lang-toggle" aria-label="Toggle language" data-i18n-aria="lang.toggleAria">
+      <span class="lang-toggle__track" aria-hidden="true"></span>
+      <span class="lang-toggle__thumb" aria-hidden="true"></span>
+    </label>
+    <span class="lang-toggle__flag" aria-hidden="true" title="English" data-i18n-title="lang.enTitle">🇺🇸</span>
+  </div>
+
   <!-- Offer banner -->
   <div id="launch-banner" class="launch-banner" role="banner">
     <div class="launch-banner__inner">
       <span class="launch-banner__logo-wrap"><img src="img/logo.png" alt="RokTips" class="launch-banner__logo" width="120" height="32"></span>
       <a href="#cta" class="launch-banner__text">
-        <span class="launch-banner__badge">Offer</span>
-        Free shipping on every RokTips order
+        <span class="launch-banner__badge" data-i18n="banner.badge">Offer</span>
+        <span data-i18n="banner.text">Free shipping on every RokTips order</span>
       </a>
     </div>
   </div>
 
   <!-- Sticky buy bar (top on desktop, bottom on mobile) -->
-  <aside id="sticky-buy" class="sticky-buy" aria-label="Quick purchase">
+  <aside id="sticky-buy" class="sticky-buy" aria-label="Quick purchase" data-i18n-aria="stickyBuy.aria">
     <div class="sticky-buy__inner">
       <img src="img/logo.png" alt="RokTips" class="sticky-buy__logo" width="100" height="28">
       <span class="sticky-buy__label">RokTips</span>
       <div class="sticky-buy__buttons">
-        <a href="https://shopify-link-placeholder" class="btn btn--secondary btn--sm js-open-register" target="_blank" rel="noopener">Buy on Shopify</a>
-        <a href="https://tiktok-link-placeholder" class="btn btn--secondary btn--sm js-open-register" target="_blank" rel="noopener">Buy on TikTok</a>
+        <a href="https://shopify-link-placeholder" class="btn btn--secondary btn--sm js-open-register" target="_blank" rel="noopener" data-i18n="common.buyShopify">Buy on Shopify</a>
+        <a href="https://tiktok-link-placeholder" class="btn btn--secondary btn--sm js-open-register" target="_blank" rel="noopener" data-i18n="common.buyTiktok">Buy on TikTok</a>
       </div>
     </div>
   </aside>
@@ -40,18 +51,18 @@
       <div class="hero__bg"></div>
       <div class="container hero__container">
         <div class="hero__content">
-          <p class="hero__brand">For electric, acoustic & bass guitarists<br>(and other string players)</p>
-          <h1 class="hero__headline">Play Longer, Stronger.</h1>
-          <p class="hero__subheadline">Stay connected to your instrument anywhere with a pocket‑sized fingertip trainer that builds strength, calluses, and control.</p>
-          <p class="hero__urgency">Free shipping on every RokTips order — delivered straight to your door.</p>
+          <p class="hero__brand" data-i18n-html="hero.brand">For electric, acoustic & bass guitarists<br>(and other string players)</p>
+          <h1 class="hero__headline" data-i18n="hero.headline">Play Longer, Stronger.</h1>
+          <p class="hero__subheadline" data-i18n="hero.subheadline">Stay connected to your instrument anywhere with a pocket‑sized fingertip trainer that builds strength, calluses, and control.</p>
+          <p class="hero__urgency" data-i18n="hero.urgency">Free shipping on every RokTips order — delivered straight to your door.</p>
           <div class="hero__features">
-            <span class="hero__feature"><span class="hero__feature-icon" aria-hidden="true">✓</span> Beginners build calluses faster</span>
-            <span class="hero__feature"><span class="hero__feature-icon" aria-hidden="true">✓</span> Practice strength drills without a guitar</span>
-            <span class="hero__feature"><span class="hero__feature-icon" aria-hidden="true">✓</span> Quick warm‑ups before you play</span>
+            <span class="hero__feature"><span class="hero__feature-icon" aria-hidden="true">✓</span> <span data-i18n="hero.feature1">Beginners build calluses faster</span></span>
+            <span class="hero__feature"><span class="hero__feature-icon" aria-hidden="true">✓</span> <span data-i18n="hero.feature2">Practice strength drills without a guitar</span></span>
+            <span class="hero__feature"><span class="hero__feature-icon" aria-hidden="true">✓</span> <span data-i18n="hero.feature3">Quick warm‑ups before you play</span></span>
           </div>
           <div class="hero__cta">
-            <a href="https://shopify-link-placeholder" class="btn btn--secondary btn--lg js-open-register" target="_blank" rel="noopener">Buy on Shopify</a>
-            <a href="https://tiktok-link-placeholder" class="btn btn--secondary btn--lg js-open-register" target="_blank" rel="noopener">Buy on TikTok</a>
+            <a href="https://shopify-link-placeholder" class="btn btn--secondary btn--lg js-open-register" target="_blank" rel="noopener" data-i18n="common.buyShopify">Buy on Shopify</a>
+            <a href="https://tiktok-link-placeholder" class="btn btn--secondary btn--lg js-open-register" target="_blank" rel="noopener" data-i18n="common.buyTiktok">Buy on TikTok</a>
           </div>
         </div>
         <figure class="hero__media">
@@ -61,12 +72,12 @@
     </header>
 
     <!-- 2. Social proof strip -->
-    <section class="social-proof" aria-label="Social proof">
+    <section class="social-proof" aria-label="Social proof" data-i18n-aria="socialProof.aria">
       <div class="container">
-        <p class="social-proof__text">Trusted by everyday guitarists (and other string players) at home, at work, and on the road</p>
+        <p class="social-proof__text" data-i18n="socialProof.text">Trusted by everyday guitarists (and other string players) at home, at work, and on the road</p>
         <div class="social-proof__stats">
           <span class="social-proof__stars" aria-hidden="true">★★★★★</span>
-          <span class="social-proof__count">4.8&nbsp;&nbsp;2,400+ players</span>
+          <span class="social-proof__count" data-i18n-html="socialProof.count">4.8&nbsp;&nbsp;2,400+ players</span>
         </div>
       </div>
     </section>
@@ -74,10 +85,10 @@
     <!-- 3. Demo video -->
     <section class="video-section" id="demo">
       <div class="container">
-        <h2 class="section-title">See RokTips in Action</h2>
-        <p class="section-subtitle">Watch how real guitarists use RokTips to warm up, build calluses, and squeeze in extra practice anywhere.</p>
+        <h2 class="section-title" data-i18n="demo.title">See RokTips in Action</h2>
+        <p class="section-subtitle" data-i18n="demo.subtitle">Watch how real guitarists use RokTips to warm up, build calluses, and squeeze in extra practice anywhere.</p>
         <div class="video-cta reveal">
-          <button type="button" class="btn btn--secondary btn--lg js-open-video">
+          <button type="button" class="btn btn--secondary btn--lg js-open-video" data-i18n="common.watchVideo">
             Watch Video
           </button>
         </div>
@@ -87,36 +98,36 @@
     <!-- 4. Benefits -->
     <section class="benefits" id="benefits">
       <div class="container">
-        <h2 class="section-title">Why Guitarists Choose RokTips</h2>
-        <p class="section-subtitle">Designed for guitarists first, and used by string players everywhere. Four ways RokTips helps you play more, hurt less, and sound better.</p>
+        <h2 class="section-title" data-i18n="benefits.title">Why Guitarists Choose RokTips</h2>
+        <p class="section-subtitle" data-i18n="benefits.subtitle">Designed for guitarists first, and used by string players everywhere. Four ways RokTips helps you play more, hurt less, and sound better.</p>
         <div class="benefits__grid">
           <article class="benefit-card reveal">
             <div class="benefit-card__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 8v32M14 18l10-10 10 10M14 30l10 10 10-10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <h3 class="benefit-card__title">Build real fretting strength</h3>
-            <p class="benefit-card__text">Target the same muscles you use on the fretboard so chords ring out clearly and long practice sessions feel easier.</p>
+            <h3 class="benefit-card__title" data-i18n="benefits.card1.title">Build real fretting strength</h3>
+            <p class="benefit-card__text" data-i18n="benefits.card1.text">Target the same muscles you use on the fretboard so chords ring out clearly and long practice sessions feel easier.</p>
           </article>
           <article class="benefit-card reveal">
             <div class="benefit-card__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="2.5"/><path d="M24 16v8l4 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
             </div>
-            <h3 class="benefit-card__title">Develop solid calluses</h3>
-            <p class="benefit-card__text">Build protective fingertip calluses away from the strings, so you can spend more time actually playing and less time nursing sore fingers.</p>
+            <h3 class="benefit-card__title" data-i18n="benefits.card2.title">Develop solid calluses</h3>
+            <p class="benefit-card__text" data-i18n="benefits.card2.text">Build protective fingertip calluses away from the strings, so you can spend more time actually playing and less time nursing sore fingers.</p>
           </article>
           <article class="benefit-card reveal">
             <div class="benefit-card__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 24l8-8 8 8 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 32l8-8 8 8 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <h3 class="benefit-card__title">Improve finger control</h3>
-            <p class="benefit-card__text">Train independent finger movement and coordination so your chord changes get smoother and your riffs get cleaner.</p>
+            <h3 class="benefit-card__title" data-i18n="benefits.card3.title">Improve finger control</h3>
+            <p class="benefit-card__text" data-i18n="benefits.card3.text">Train independent finger movement and coordination so your chord changes get smoother and your riffs get cleaner.</p>
           </article>
           <article class="benefit-card reveal">
             <div class="benefit-card__icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 24h32M24 8v32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="4" fill="currentColor"/></svg>
             </div>
-            <h3 class="benefit-card__title">Practise guitar skills anywhere</h3>
-            <p class="benefit-card__text">No guitar needed—use RokTips at your desk, on the sofa, or during your commute and show up to the fretboard already warmed up.</p>
+            <h3 class="benefit-card__title" data-i18n="benefits.card4.title">Practise guitar skills anywhere</h3>
+            <p class="benefit-card__text" data-i18n="benefits.card4.text">No guitar needed—use RokTips at your desk, on the sofa, or during your commute and show up to the fretboard already warmed up.</p>
           </article>
         </div>
       </div>
@@ -125,27 +136,27 @@
     <!-- 5. How it works -->
     <section class="how-it-works" id="how">
       <div class="container">
-        <h2 class="section-title">How It Works for String Players</h2>
-        <p class="section-subtitle">Three simple steps you can add to any practice routine—whether you play guitar, bass, or other string instruments.</p>
+        <h2 class="section-title" data-i18n="how.title">How It Works for String Players</h2>
+        <p class="section-subtitle" data-i18n="how.subtitle">Three simple steps you can add to any practice routine—whether you play guitar, bass, or other string instruments.</p>
         <ol class="steps">
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">1</span>
-            <h3 class="step__title">Slip RokTips on your fretting/playing hand</h3>
-            <p class="step__text">Slide RokTips onto the fingers you use most on the fretboard or fingerboard. They feel snug but comfortable, with no setup or straps.</p>
+            <h3 class="step__title" data-i18n="how.step1.title">Slip RokTips on your fretting/playing hand</h3>
+            <p class="step__text" data-i18n="how.step1.text">Slide RokTips onto the fingers you use most on the fretboard or fingerboard. They feel snug but comfortable, with no setup or straps.</p>
           </li>
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">2</span>
-            <h3 class="step__title">Do short squeeze‑and‑release drills</h3>
-            <p class="step__text">Squeeze and release each finger for a short set. RokTips simulate string resistance so you can train strength and calluses without your instrument.</p>
+            <h3 class="step__title" data-i18n="how.step2.title">Do short squeeze‑and‑release drills</h3>
+            <p class="step__text" data-i18n="how.step2.text">Squeeze and release each finger for a short set. RokTips simulate string resistance so you can train strength and calluses without your instrument.</p>
           </li>
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">3</span>
-            <h3 class="step__title">Pick up your guitar (or other string instrument) and feel the difference</h3>
-            <p class="step__text">Transfer your gains straight to your favourite songs or pieces—less fingertip pain, cleaner notes, and longer, more enjoyable practice sessions.</p>
+            <h3 class="step__title" data-i18n="how.step3.title">Pick up your guitar (or other string instrument) and feel the difference</h3>
+            <p class="step__text" data-i18n="how.step3.text">Transfer your gains straight to your favourite songs or pieces—less fingertip pain, cleaner notes, and longer, more enjoyable practice sessions.</p>
           </li>
         </ol>
         <div class="video-cta reveal">
-          <button type="button" class="btn btn--secondary btn--lg js-open-local-video">
+          <button type="button" class="btn btn--secondary btn--lg js-open-local-video" data-i18n="common.watchVideo">
             Watch Video
           </button>
         </div>
@@ -155,37 +166,37 @@
     <!-- 6. Comparison -->
     <section class="comparison" id="comparison">
       <div class="container">
-        <h2 class="section-title">Without vs With RokTips</h2>
-        <p class="section-subtitle">What your practice looks like as a guitarist or string player, side‑by‑side.</p>
+        <h2 class="section-title" data-i18n="comparison.title">Without vs With RokTips</h2>
+        <p class="section-subtitle" data-i18n="comparison.subtitle">What your practice looks like as a guitarist or string player, side‑by‑side.</p>
         <div class="comparison-table-wrapper reveal">
           <table class="comparison-table">
             <thead>
               <tr>
                 <th scope="col"></th>
-                <th scope="col">Without RokTips</th>
-                <th scope="col">With RokTips</th>
+                <th scope="col" data-i18n="comparison.colWithout">Without RokTips</th>
+                <th scope="col" data-i18n="comparison.colWith">With RokTips</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">Finger strength</th>
-                <td>Builds slowly, only while you have a guitar in your hands</td>
-                <td>Targeted fretting‑hand training while you work, commute, or watch TV</td>
+                <th scope="row" data-i18n="comparison.row1.label">Finger strength</th>
+                <td data-i18n="comparison.row1.without">Builds slowly, only while you have a guitar in your hands</td>
+                <td data-i18n="comparison.row1.with">Targeted fretting‑hand training while you work, commute, or watch TV</td>
               </tr>
               <tr>
-                <th scope="row">Calluses</th>
-                <td>Take weeks to develop, with sore, stinging fingertips</td>
-                <td>Calluses develop faster so playing your favourite songs hurts less</td>
+                <th scope="row" data-i18n="comparison.row2.label">Calluses</th>
+                <td data-i18n="comparison.row2.without">Take weeks to develop, with sore, stinging fingertips</td>
+                <td data-i18n="comparison.row2.with">Calluses develop faster so playing your favourite songs hurts less</td>
               </tr>
               <tr>
-                <th scope="row">Practice time</th>
-                <td>Limited to when you're near your guitar and amp</td>
-                <td>Practise guitar‑specific strength drills anywhere, no guitar needed</td>
+                <th scope="row" data-i18n="comparison.row3.label">Practice time</th>
+                <td data-i18n="comparison.row3.without">Limited to when you're near your guitar and amp</td>
+                <td data-i18n="comparison.row3.with">Practise guitar‑specific strength drills anywhere, no guitar needed</td>
               </tr>
               <tr>
-                <th scope="row">Consistency</th>
-                <td>Easy to skip days when life gets busy</td>
-                <td>Quick sessions that fit around work, family, and gigs</td>
+                <th scope="row" data-i18n="comparison.row4.label">Consistency</th>
+                <td data-i18n="comparison.row4.without">Easy to skip days when life gets busy</td>
+                <td data-i18n="comparison.row4.with">Quick sessions that fit around work, family, and gigs</td>
               </tr>
             </tbody>
           </table>
@@ -196,31 +207,31 @@
     <!-- 7. Testimonials -->
     <section class="testimonials" id="testimonials">
       <div class="container">
-        <h2 class="section-title">Loved by Everyday Guitarists</h2>
-        <p class="section-subtitle">Join 2,400+ guitarists and other string players using RokTips to make practice feel better and sound better.</p>
+        <h2 class="section-title" data-i18n="testimonials.title">Loved by Everyday Guitarists</h2>
+        <p class="section-subtitle" data-i18n="testimonials.subtitle">Join 2,400+ guitarists and other string players using RokTips to make practice feel better and sound better.</p>
         <div class="testimonials__grid">
           <blockquote class="testimonial-card reveal">
             <div class="testimonial-card__stars" aria-hidden="true">★★★★★</div>
-            <p class="testimonial-card__quote">Great way to build finger strength when I can't take my guitar with me. I use it on my lunch break and notice the difference when I plug in at night.</p>
+            <p class="testimonial-card__quote" data-i18n="testimonials.card1.quote">Great way to build finger strength when I can't take my guitar with me. I use it on my lunch break and notice the difference when I plug in at night.</p>
             <footer class="testimonial-card__author">
               <img src="https://placehold.co/56x56/333/666?text=1" alt="" width="56" height="56" class="testimonial-card__avatar">
-              <cite>Sam · Bedroom guitarist</cite>
+              <cite data-i18n="testimonials.card1.cite">Sam · Bedroom guitarist</cite>
             </footer>
           </blockquote>
           <blockquote class="testimonial-card reveal">
             <div class="testimonial-card__stars" aria-hidden="true">★★★★★</div>
-            <p class="testimonial-card__quote">I use RokTips for a quick warm‑up before I practise scales and solos. My fingers feel ready way quicker and I can go longer without fatigue.</p>
+            <p class="testimonial-card__quote" data-i18n="testimonials.card2.quote">I use RokTips for a quick warm‑up before I practise scales and solos. My fingers feel ready way quicker and I can go longer without fatigue.</p>
             <footer class="testimonial-card__author">
               <img src="https://placehold.co/56x56/333/666?text=2" alt="" width="56" height="56" class="testimonial-card__avatar">
-              <cite>Mia · Hobby player</cite>
+              <cite data-i18n="testimonials.card2.cite">Mia · Hobby player</cite>
             </footer>
           </blockquote>
           <blockquote class="testimonial-card reveal">
             <div class="testimonial-card__stars" aria-hidden="true">★★★★★</div>
-            <p class="testimonial-card__quote">I'm a total beginner and my fingertips used to be on fire after 10 minutes. RokTips helped me build calluses so I could actually stick with learning chords.</p>
+            <p class="testimonial-card__quote" data-i18n="testimonials.card3.quote">I'm a total beginner and my fingertips used to be on fire after 10 minutes. RokTips helped me build calluses so I could actually stick with learning chords.</p>
             <footer class="testimonial-card__author">
               <img src="https://placehold.co/56x56/333/666?text=3" alt="" width="56" height="56" class="testimonial-card__avatar">
-              <cite>Alex · New guitarist</cite>
+              <cite data-i18n="testimonials.card3.cite">Alex · New guitarist</cite>
             </footer>
           </blockquote>
         </div>
@@ -257,12 +268,12 @@
     <section class="cta-final" id="cta">
       <div class="container">
         <div class="cta-final__box reveal">
-          <p class="cta-final__urgency">Free shipping on every RokTips order</p>
-          <h2 class="cta-final__headline">Get Stronger Fingers. Start Today.</h2>
-          <p class="cta-final__text">Join thousands of guitar players and other string musicians training with RokTips. No instrument needed—just a few minutes a day. Order now and get free shipping, every time.</p>
+          <p class="cta-final__urgency" data-i18n="cta.urgency">Free shipping on every RokTips order</p>
+          <h2 class="cta-final__headline" data-i18n="cta.headline">Get Stronger Fingers. Start Today.</h2>
+          <p class="cta-final__text" data-i18n="cta.text">Join thousands of guitar players and other string musicians training with RokTips. No instrument needed—just a few minutes a day. Order now and get free shipping, every time.</p>
           <div class="cta-final__buttons">
-            <a href="https://shopify-link-placeholder" class="btn btn--secondary btn--lg js-open-register" target="_blank" rel="noopener">Buy on Shopify</a>
-            <a href="https://tiktok-link-placeholder" class="btn btn--secondary btn--lg js-open-register" target="_blank" rel="noopener">Buy on TikTok</a>
+            <a href="https://shopify-link-placeholder" class="btn btn--secondary btn--lg js-open-register" target="_blank" rel="noopener" data-i18n="common.buyShopify">Buy on Shopify</a>
+            <a href="https://tiktok-link-placeholder" class="btn btn--secondary btn--lg js-open-register" target="_blank" rel="noopener" data-i18n="common.buyTiktok">Buy on TikTok</a>
           </div>
         </div>
       </div>
@@ -284,13 +295,14 @@
   <!-- Video modal -->
   <div class="video-modal" id="video-modal" aria-hidden="true">
     <div class="video-modal__backdrop" data-video-close></div>
-    <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-label="RokTips demo video">
-      <button type="button" class="video-modal__close" data-video-close aria-label="Close video">&times;</button>
+    <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-label="RokTips demo video" data-i18n-aria="videoModal.youtubeAria">
+      <button type="button" class="video-modal__close" data-video-close aria-label="Close video" data-i18n-aria="videoModal.closeAria">&times;</button>
       <div class="video-modal__frame">
         <iframe
           id="video-iframe"
           src=""
           title="RokTips demo video"
+          data-i18n-title="videoModal.youtubeTitle"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
@@ -301,8 +313,8 @@
   <!-- Local MP4 video modal -->
   <div class="video-modal" id="local-video-modal" aria-hidden="true">
     <div class="video-modal__backdrop" data-local-video-close></div>
-    <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-label="RokTips video">
-      <button type="button" class="video-modal__close" data-local-video-close aria-label="Close video">&times;</button>
+    <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-label="RokTips video" data-i18n-aria="videoModal.localAria">
+      <button type="button" class="video-modal__close" data-local-video-close aria-label="Close video" data-i18n-aria="videoModal.closeAria">&times;</button>
       <div class="video-modal__frame">
         <video
           id="local-video"
@@ -311,7 +323,7 @@
           playsinline
         >
           <source src="hivAVFy6.mp4" type="video/mp4">
-          Sorry, your browser doesn’t support embedded videos.
+          <span data-i18n="videoModal.noSupport">Sorry, your browser doesn’t support embedded videos.</span>
         </video>
       </div>
     </div>
@@ -321,22 +333,22 @@
   <div class="interest-modal" id="interest-modal" aria-hidden="true">
     <div class="interest-modal__backdrop" data-modal-close></div>
     <div class="interest-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="interest-modal-title">
-      <button type="button" class="interest-modal__close" data-modal-close aria-label="Close registration form">&times;</button>
-      <h2 class="interest-modal__title" id="interest-modal-title">Register your interest in RokTips</h2>
-      <p class="interest-modal__subtitle"><span class="interest-modal__icon" aria-hidden="true">🚀</span> Launching soon. Leave your details and we'll let you know the moment RokTips goes live.</p>
+      <button type="button" class="interest-modal__close" data-modal-close aria-label="Close registration form" data-i18n-aria="interest.closeAria">&times;</button>
+      <h2 class="interest-modal__title" id="interest-modal-title" data-i18n="interest.title">Register your interest in RokTips</h2>
+      <p class="interest-modal__subtitle"><span class="interest-modal__icon" aria-hidden="true">🚀</span> <span data-i18n="interest.subtitle">Launching soon. Leave your details and we'll let you know the moment RokTips goes live.</span></p>
       <div class="interest-modal__body">
         <form class="interest-modal__form" id="interest-form" novalidate>
           <div class="interest-modal__fields">
           <label class="interest-modal__field">
-            <span class="interest-modal__label">First name</span>
-            <input type="text" name="first_name" id="interest-first-name" class="interest-modal__input" placeholder="Alex" autocomplete="given-name">
+            <span class="interest-modal__label" data-i18n="interest.firstNameLabel">First name</span>
+            <input type="text" name="first_name" id="interest-first-name" class="interest-modal__input" placeholder="Alex" autocomplete="given-name" data-i18n-placeholder="interest.firstNamePlaceholder">
           </label>
           <label class="interest-modal__field">
-            <span class="interest-modal__label">Email</span>
-            <input type="email" name="email" id="interest-email" class="interest-modal__input" placeholder="you@example.com" autocomplete="email">
+            <span class="interest-modal__label" data-i18n="interest.emailLabel">Email</span>
+            <input type="email" name="email" id="interest-email" class="interest-modal__input" placeholder="you@example.com" autocomplete="email" data-i18n-placeholder="interest.emailPlaceholder">
           </label>
           <fieldset class="interest-modal__field interest-modal__channels">
-            <legend class="interest-modal__label">Preferred app for messages</legend>
+            <legend class="interest-modal__label" data-i18n="interest.channelLegend">Preferred app for messages</legend>
             <div class="interest-modal__channel-row">
               <div class="interest-modal__channel-options">
                 <label class="interest-modal__channel">
@@ -356,14 +368,15 @@
                 value="+84 "
                 placeholder="+84 7123 456 789"
                 autocomplete="tel"
+                data-i18n-placeholder="interest.phonePlaceholder"
               >
             </div>
           </fieldset>
           </div>
           <p class="interest-modal__error" id="interest-error" aria-live="polite" hidden></p>
-          <p class="interest-modal__success" id="interest-success" aria-live="polite" hidden>Thanks for your interest! We'll notify you when RokTips is available.</p>
-          <button type="submit" class="btn btn--secondary btn--lg interest-modal__submit">Notify me when RokTips launches</button>
-          <p class="interest-modal__privacy">We’ll only use your details to let you know about the RokTips launch and related offers. No spam.</p>
+          <p class="interest-modal__success" id="interest-success" aria-live="polite" hidden data-i18n="interest.success">Thanks for your interest! We'll notify you when RokTips is available.</p>
+          <button type="submit" class="btn btn--secondary btn--lg interest-modal__submit" data-i18n="interest.submit">Notify me when RokTips launches</button>
+          <p class="interest-modal__privacy" data-i18n-html="interest.privacyHtml">We’ll only use your details to let you know about the RokTips launch and related offers. No spam.</p>
         </form>
       </div>
     </div>
