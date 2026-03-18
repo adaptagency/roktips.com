@@ -8,26 +8,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="css/styles.css?v=2">
 </head>
 <body>
-  <!-- Limited launch offer banner -->
+  <!-- Offer banner -->
   <div id="launch-banner" class="launch-banner" role="banner">
     <div class="launch-banner__inner">
-      <span class="launch-banner__logo-wrap"><img src="logo.png" alt="RokTips" class="launch-banner__logo" width="120" height="32"></span>
-      <p class="launch-banner__text"><span class="launch-banner__badge">Launch offer</span> Free shipping on first orders — ends soon</p>
-      <button type="button" class="launch-banner__dismiss" id="banner-dismiss" aria-label="Dismiss banner">&times;</button>
+      <span class="launch-banner__logo-wrap"><img src="img/logo.png" alt="RokTips" class="launch-banner__logo" width="120" height="32"></span>
+      <a href="#cta" class="launch-banner__text">
+        <span class="launch-banner__badge">Offer</span>
+        Free shipping on every RokTips order
+      </a>
     </div>
   </div>
 
   <!-- Sticky buy bar (top on desktop, bottom on mobile) -->
   <aside id="sticky-buy" class="sticky-buy" aria-label="Quick purchase">
     <div class="sticky-buy__inner">
-      <img src="logo.png" alt="RokTips" class="sticky-buy__logo" width="100" height="28">
+      <img src="img/logo.png" alt="RokTips" class="sticky-buy__logo" width="100" height="28">
       <span class="sticky-buy__label">RokTips</span>
       <div class="sticky-buy__buttons">
-        <a href="https://shopify-link-placeholder" class="btn btn--primary btn--sm btn--pulse" target="_blank" rel="noopener">Buy on Shopify</a>
-        <a href="https://tiktok-link-placeholder" class="btn btn--secondary btn--sm" target="_blank" rel="noopener">Buy on TikTok</a>
+        <a href="https://shopify-link-placeholder" class="btn btn--secondary btn--sm js-open-register" target="_blank" rel="noopener">Buy on Shopify</a>
+        <a href="https://tiktok-link-placeholder" class="btn btn--secondary btn--sm js-open-register" target="_blank" rel="noopener">Buy on TikTok</a>
       </div>
     </div>
   </aside>
@@ -38,22 +40,22 @@
       <div class="hero__bg"></div>
       <div class="container hero__container">
         <div class="hero__content">
-          <p class="hero__brand">For electric, acoustic & bass guitarists (and other string players)</p>
-          <h1 class="hero__headline">Stronger Fingers. Less Pain. More Guitar.</h1>
-          <p class="hero__subheadline">A pocket‑sized fingertip trainer made for guitarists, and loved by other string players too. Build calluses, strength, and control in minutes a day—so practice stops hurting and your playing levels up.</p>
-          <p class="hero__urgency">Limited launch price for early guitarists — free shipping when you order today.</p>
+          <p class="hero__brand">For electric, acoustic & bass guitarists<br>(and other string players)</p>
+          <h1 class="hero__headline">Play Longer, Stronger.</h1>
+          <p class="hero__subheadline">Stay connected to your instrument anywhere with a pocket‑sized fingertip trainer that builds strength, calluses, and control.</p>
+          <p class="hero__urgency">Free shipping on every RokTips order — delivered straight to your door.</p>
           <div class="hero__features">
             <span class="hero__feature"><span class="hero__feature-icon" aria-hidden="true">✓</span> Beginners build calluses faster</span>
             <span class="hero__feature"><span class="hero__feature-icon" aria-hidden="true">✓</span> Practice strength drills without a guitar</span>
-            <span class="hero__feature"><span class="hero__feature-icon" aria-hidden="true">✓</span> 2‑minute warm‑ups before you play</span>
+            <span class="hero__feature"><span class="hero__feature-icon" aria-hidden="true">✓</span> Quick warm‑ups before you play</span>
           </div>
           <div class="hero__cta">
-            <a href="https://shopify-link-placeholder" class="btn btn--primary btn--lg btn--pulse" target="_blank" rel="noopener">Buy on Shopify</a>
-            <a href="https://tiktok-link-placeholder" class="btn btn--secondary btn--lg" target="_blank" rel="noopener">Buy on TikTok</a>
+            <a href="https://shopify-link-placeholder" class="btn btn--secondary btn--lg js-open-register" target="_blank" rel="noopener">Buy on Shopify</a>
+            <a href="https://tiktok-link-placeholder" class="btn btn--secondary btn--lg js-open-register" target="_blank" rel="noopener">Buy on TikTok</a>
           </div>
         </div>
         <figure class="hero__media">
-          <img src="Roktips-Packageing.webp" alt="RokTips packaging and finger training tips for guitarists" width="560" height="560" class="hero__image">
+          <img src="img/roktips.jpeg" alt="RokTips fingertip training tips and packaging for guitar and string players" width="560" height="560" class="hero__image">
         </figure>
       </div>
     </header>
@@ -64,7 +66,7 @@
         <p class="social-proof__text">Trusted by everyday guitarists (and other string players) at home, at work, and on the road</p>
         <div class="social-proof__stats">
           <span class="social-proof__stars" aria-hidden="true">★★★★★</span>
-          <span class="social-proof__count">4.8 · 2,400+ players</span>
+          <span class="social-proof__count">4.8&nbsp;&nbsp;2,400+ players</span>
         </div>
       </div>
     </section>
@@ -74,14 +76,10 @@
       <div class="container">
         <h2 class="section-title">See RokTips in Action</h2>
         <p class="section-subtitle">Watch how real guitarists use RokTips to warm up, build calluses, and squeeze in extra practice anywhere.</p>
-        <div class="video-wrapper reveal">
-          <a href="#" class="video-thumb" id="video-trigger" aria-label="Play demo video">
-            <img src="https://placehold.co/960x540/252525/ff6b35?text=Play+Video" alt="RokTips demo video thumbnail" width="960" height="540">
-            <span class="video-thumb__play" aria-hidden="true"></span>
-          </a>
-          <div class="video-embed" id="video-embed" hidden>
-            <iframe src="" title="RokTips demo video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+        <div class="video-cta reveal">
+          <button type="button" class="btn btn--secondary btn--lg js-open-video">
+            Watch Video
+          </button>
         </div>
       </div>
     </section>
@@ -138,7 +136,7 @@
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">2</span>
             <h3 class="step__title">Do short squeeze‑and‑release drills</h3>
-            <p class="step__text">Squeeze and release each finger for 1–2 minutes. RokTips simulate string resistance so you can train strength and calluses without your instrument.</p>
+            <p class="step__text">Squeeze and release each finger for a short set. RokTips simulate string resistance so you can train strength and calluses without your instrument.</p>
           </li>
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">3</span>
@@ -146,6 +144,11 @@
             <p class="step__text">Transfer your gains straight to your favourite songs or pieces—less fingertip pain, cleaner notes, and longer, more enjoyable practice sessions.</p>
           </li>
         </ol>
+        <div class="video-cta reveal">
+          <button type="button" class="btn btn--secondary btn--lg js-open-local-video">
+            Watch Video
+          </button>
+        </div>
       </div>
     </section>
 
@@ -182,7 +185,7 @@
               <tr>
                 <th scope="row">Consistency</th>
                 <td>Easy to skip days when life gets busy</td>
-                <td>Quick daily sessions that fit around work, family, and gigs</td>
+                <td>Quick sessions that fit around work, family, and gigs</td>
               </tr>
             </tbody>
           </table>
@@ -206,7 +209,7 @@
           </blockquote>
           <blockquote class="testimonial-card reveal">
             <div class="testimonial-card__stars" aria-hidden="true">★★★★★</div>
-            <p class="testimonial-card__quote">I use RokTips for a 2‑minute warm‑up before I practise scales and solos. My fingers feel ready way quicker and I can go longer without fatigue.</p>
+            <p class="testimonial-card__quote">I use RokTips for a quick warm‑up before I practise scales and solos. My fingers feel ready way quicker and I can go longer without fatigue.</p>
             <footer class="testimonial-card__author">
               <img src="https://placehold.co/56x56/333/666?text=2" alt="" width="56" height="56" class="testimonial-card__avatar">
               <cite>Mia · Hobby player</cite>
@@ -236,7 +239,7 @@
           </details>
           <details class="faq-item reveal">
             <summary class="faq-item__question">How often should I train?</summary>
-            <p class="faq-item__answer">Short daily sessions are recommended.</p>
+            <p class="faq-item__answer">Short sessions are recommended.</p>
           </details>
           <details class="faq-item reveal">
             <summary class="faq-item__question">Are they suitable for beginners?</summary>
@@ -258,8 +261,8 @@
           <h2 class="cta-final__headline">Get Stronger Fingers. Start Today.</h2>
           <p class="cta-final__text">Join thousands of guitar players and other string musicians training with RokTips. No instrument needed—just a few minutes a day. Order now and get free shipping, every time.</p>
           <div class="cta-final__buttons">
-            <a href="https://shopify-link-placeholder" class="btn btn--primary btn--lg btn--pulse" target="_blank" rel="noopener">Buy on Shopify</a>
-            <a href="https://tiktok-link-placeholder" class="btn btn--secondary btn--lg" target="_blank" rel="noopener">Buy on TikTok</a>
+            <a href="https://shopify-link-placeholder" class="btn btn--secondary btn--lg js-open-register" target="_blank" rel="noopener">Buy on Shopify</a>
+            <a href="https://tiktok-link-placeholder" class="btn btn--secondary btn--lg js-open-register" target="_blank" rel="noopener">Buy on TikTok</a>
           </div>
         </div>
       </div>
@@ -272,12 +275,102 @@
       <nav class="footer__nav" aria-label="Footer">
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
-        <a href="https://shopify-link-placeholder" target="_blank" rel="noopener">Buy</a>
+        <a href="https://shopify-link-placeholder" class="js-open-register" target="_blank" rel="noopener">Buy</a>
       </nav>
       <p class="footer__copy">© RokTips. Build guitar finger strength anywhere.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Video modal -->
+  <div class="video-modal" id="video-modal" aria-hidden="true">
+    <div class="video-modal__backdrop" data-video-close></div>
+    <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-label="RokTips demo video">
+      <button type="button" class="video-modal__close" data-video-close aria-label="Close video">&times;</button>
+      <div class="video-modal__frame">
+        <iframe
+          id="video-iframe"
+          src=""
+          title="RokTips demo video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Local MP4 video modal -->
+  <div class="video-modal" id="local-video-modal" aria-hidden="true">
+    <div class="video-modal__backdrop" data-local-video-close></div>
+    <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-label="RokTips video">
+      <button type="button" class="video-modal__close" data-local-video-close aria-label="Close video">&times;</button>
+      <div class="video-modal__frame">
+        <video
+          id="local-video"
+          controls
+          preload="metadata"
+          playsinline
+        >
+          <source src="hivAVFy6.mp4" type="video/mp4">
+          Sorry, your browser doesn’t support embedded videos.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interest registration modal -->
+  <div class="interest-modal" id="interest-modal" aria-hidden="true">
+    <div class="interest-modal__backdrop" data-modal-close></div>
+    <div class="interest-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="interest-modal-title">
+      <button type="button" class="interest-modal__close" data-modal-close aria-label="Close registration form">&times;</button>
+      <h2 class="interest-modal__title" id="interest-modal-title">Register your interest in RokTips</h2>
+      <p class="interest-modal__subtitle"><span class="interest-modal__icon" aria-hidden="true">🚀</span> Launching soon. Leave your details and we'll let you know the moment RokTips goes live.</p>
+      <div class="interest-modal__body">
+        <form class="interest-modal__form" id="interest-form" novalidate>
+          <div class="interest-modal__fields">
+          <label class="interest-modal__field">
+            <span class="interest-modal__label">First name</span>
+            <input type="text" name="first_name" id="interest-first-name" class="interest-modal__input" placeholder="Alex" autocomplete="given-name">
+          </label>
+          <label class="interest-modal__field">
+            <span class="interest-modal__label">Email</span>
+            <input type="email" name="email" id="interest-email" class="interest-modal__input" placeholder="you@example.com" autocomplete="email">
+          </label>
+          <label class="interest-modal__field">
+            <span class="interest-modal__label">Phone number</span>
+            <div class="interest-modal__phone">
+              <select name="phone_country" id="interest-phone-country" class="interest-modal__phone-code" autocomplete="tel-country-code">
+                <option value="+84" selected>🇻🇳 +84 (Vietnam)</option>
+                <option value="+1">🇺🇸 +1 (US/CA)</option>
+                <option value="+44">🇬🇧 +44 (UK)</option>
+                <option value="+61">🇦🇺 +61 (Australia)</option>
+                <option value="+65">🇸🇬 +65 (Singapore)</option>
+              </select>
+              <input type="tel" name="phone" id="interest-phone" class="interest-modal__input interest-modal__phone-input" placeholder="7123 456 789" autocomplete="tel-local">
+            </div>
+          </label>
+          <fieldset class="interest-modal__field interest-modal__channels">
+            <legend class="interest-modal__label">Preferred app for messages</legend>
+            <div class="interest-modal__channel-options">
+              <label class="interest-modal__channel">
+                <input type="radio" name="channel" value="whatsapp">
+                <span>WhatsApp</span>
+              </label>
+              <label class="interest-modal__channel">
+                <input type="radio" name="channel" value="zalo">
+                <span>Zalo</span>
+              </label>
+            </div>
+          </fieldset>
+          </div>
+          <p class="interest-modal__error" id="interest-error" aria-live="polite" hidden></p>
+          <p class="interest-modal__success" id="interest-success" aria-live="polite" hidden>Thanks for your interest! We'll notify you when RokTips is available.</p>
+          <button type="submit" class="btn btn--secondary btn--lg interest-modal__submit">Notify me when RokTips launches</button>
+          <p class="interest-modal__privacy">We’ll only use your details to let you know about the RokTips launch and related offers. No spam.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
