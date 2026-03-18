@@ -224,16 +224,15 @@
 
         var firstName = document.getElementById('interest-first-name');
         var email = document.getElementById('interest-email');
-        var phoneCountry = document.getElementById('interest-phone-country');
         var phone = document.getElementById('interest-phone');
         var channelInputs = form.querySelectorAll('input[name="channel"]');
 
         var firstNameVal = firstName ? firstName.value.trim() : '';
         var emailVal = email ? email.value.trim() : '';
-        var phoneVal = phone ? phone.value.trim() : '';
-        var phoneCountryVal = phoneCountry ? phoneCountry.value : '';
+        var phoneRawVal = phone ? phone.value.trim() : '';
 
-        var hasContact = emailVal !== '' || phoneVal !== '';
+        var phoneHasDigits = /\d/.test(phoneRawVal);
+        var hasContact = emailVal !== '' || phoneHasDigits;
 
         if (!hasContact) {
           if (errorEl) {
@@ -244,7 +243,7 @@
           return;
         }
 
-        if (phoneVal !== '') {
+        if (phoneHasDigits) {
           var channelSelected = false;
           channelInputs.forEach(function (input) {
             if (input.checked) channelSelected = true;
@@ -265,6 +264,27 @@
         channelInputs.forEach(function (input) {
           if (input.checked) channelVal = input.value;
         });
+
+        // Parse phone input:
+        // - If user enters a full international number (starts with +), extract country code.
+        // - Otherwise assume Vietnam +84 and treat the input as local/national number.
+        var DEFAULT_COUNTRY_CODE = '+84';
+        var phoneCountryVal = DEFAULT_COUNTRY_CODE;
+        var phoneVal = '';
+        if (phoneHasDigits) {
+          var raw = phoneRawVal.replace(/\s+/g, ' ').trim();
+          if (raw.charAt(0) === '+') {
+            var match = raw.match(/^(\+\d{1,4})\s*(.*)$/);
+            if (match) {
+              phoneCountryVal = match[1];
+              phoneVal = (match[2] || '').trim();
+            } else {
+              phoneVal = raw;
+            }
+          } else {
+            phoneVal = raw;
+          }
+        }
 
         // Send to Google Apps Script endpoint (form-encoded to avoid CORS preflight)
         var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzoZHSHwnk2Q_9ik8Jb5d1XF3PYtHEoN7oBDLPzSP6XlRxe9JsNy4tXBd0EzR6zg_gK/exec';

@@ -1331,8 +1331,7 @@ a {
   }
 }
 
-.interest-modal__channels,
-.interest-modal__phone-field {
+.interest-modal__channels {
   grid-column: 1 / -1;
 }
 
@@ -1402,10 +1401,23 @@ a {
   margin: 0 0 0.35rem;
 }
 
+.interest-modal__channel-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
 .interest-modal__channel-options {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
+}
+
+.interest-modal__phone-single {
+  flex: 1;
+  min-width: 220px;
 }
 
 .interest-modal__channel {
