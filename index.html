@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=2">
+  <link rel="stylesheet" href="css/styles.css?v=3">
 </head>
 <body>
   <!-- Offer banner -->
@@ -335,19 +335,6 @@
             <span class="interest-modal__label">Email</span>
             <input type="email" name="email" id="interest-email" class="interest-modal__input" placeholder="you@example.com" autocomplete="email">
           </label>
-          <label class="interest-modal__field">
-            <span class="interest-modal__label">Phone number</span>
-            <div class="interest-modal__phone">
-              <select name="phone_country" id="interest-phone-country" class="interest-modal__phone-code" autocomplete="tel-country-code">
-                <option value="+84" selected>🇻🇳 +84 (Vietnam)</option>
-                <option value="+1">🇺🇸 +1 (US/CA)</option>
-                <option value="+44">🇬🇧 +44 (UK)</option>
-                <option value="+61">🇦🇺 +61 (Australia)</option>
-                <option value="+65">🇸🇬 +65 (Singapore)</option>
-              </select>
-              <input type="tel" name="phone" id="interest-phone" class="interest-modal__input interest-modal__phone-input" placeholder="7123 456 789" autocomplete="tel-local">
-            </div>
-          </label>
           <fieldset class="interest-modal__field interest-modal__channels">
             <legend class="interest-modal__label">Preferred app for messages</legend>
             <div class="interest-modal__channel-options">
@@ -361,6 +348,19 @@
               </label>
             </div>
           </fieldset>
+          <div class="interest-modal__field interest-modal__phone-field">
+            <span class="interest-modal__label">Phone:</span>
+            <div class="interest-modal__phone">
+              <select name="phone_country" id="interest-phone-country" class="interest-modal__phone-code" autocomplete="tel-country-code">
+                <option value="+84" selected>🇻🇳 +84 (Vietnam)</option>
+                <option value="+1">🇺🇸 +1 (US/CA)</option>
+                <option value="+44">🇬🇧 +44 (UK)</option>
+                <option value="+61">🇦🇺 +61 (Australia)</option>
+                <option value="+65">🇸🇬 +65 (Singapore)</option>
+              </select>
+              <input type="tel" name="phone" id="interest-phone" class="interest-modal__input interest-modal__phone-input" placeholder="7123 456 789" autocomplete="tel-local">
+            </div>
+          </div>
           </div>
           <p class="interest-modal__error" id="interest-error" aria-live="polite" hidden></p>
           <p class="interest-modal__success" id="interest-success" aria-live="polite" hidden>Thanks for your interest! We'll notify you when RokTips is available.</p>

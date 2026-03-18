@@ -1322,6 +1322,18 @@ a {
   display: grid;
   gap: 0.9rem;
   margin-bottom: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 420px) {
+  .interest-modal__fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+.interest-modal__channels,
+.interest-modal__phone-field {
+  grid-column: 1 / -1;
 }
 
 .interest-modal__field {
