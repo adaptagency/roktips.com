@@ -8,7 +8,9 @@
 ### Global UI patterns
 - **Buttons**: Use the existing outline style (`btn btn--secondary`) for CTAs across the site.
 - **Sticky buy bar**: Single CTA **Buy Now** linking to `#cta`. No logo/text in the bar. Opaque background to prevent bleed-through.
-- **Offer banner**: Fixed at top. Sticky buy bar offsets below it on desktop/tablet.
+- **Offer banner + buy bar (header stack)**:
+  - Both are **`position: sticky`** (not `fixed`) for best cross-browser reliability, including iOS Safari.
+  - The buy bar sits directly under the banner using a CSS variable `--banner-h` set by JS based on the banner’s rendered height (so it still works when the banner wraps to 2 lines).
 
 ### Bilingual (Vietnamese default)
 - **Languages**: Vietnamese (default) and English.
@@ -19,6 +21,10 @@
 ### Video
 - **YouTube modal**: Opens from “Watch Video” button; responsive sizing fits viewport and stops playback on close.
 - **Local MP4 modal**: Opens from “How it works” section button; responsive sizing fits viewport; resets on close.
+
+### Responsive notes
+- **Mobile hero image**: Reduced on small screens to keep the hero compact and readable.
+- **Offer banner text**: Centred on mobile.
 
 ### Lead capture (contact modal)
 - **Goal**: Capture details for future marketing; purchases happen on Shopify/TikTok.
