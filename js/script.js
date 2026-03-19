@@ -557,7 +557,19 @@
     document.body.classList.add('has-banner');
   }
 
-  // Sticky buy bar is handled by CSS only (no inline positioning).
+  // Sticky banner + buy bar stack: expose banner height as CSS var so the buy
+  // bar can stick just below it (even when the banner wraps to 2 lines).
+  var stickyBuy = document.getElementById('sticky-buy');
+  if (launchBanner && stickyBuy) {
+    function updateBannerHeightVar() {
+      var isDismissed = launchBanner.classList.contains('is-dismissed');
+      var h = isDismissed ? 0 : launchBanner.getBoundingClientRect().height;
+      document.documentElement.style.setProperty('--banner-h', Math.ceil(h) + 'px');
+    }
+
+    updateBannerHeightVar();
+    window.addEventListener('resize', updateBannerHeightVar, { passive: true });
+  }
 
   // --- Video: open YouTube embed in modal ---
   var videoModal = document.getElementById('video-modal');

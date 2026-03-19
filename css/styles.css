@@ -44,13 +44,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body.has-banner {
-  padding-top: calc(48px + env(safe-area-inset-top, 0px));
+/* Sticky header stack (banner + buy bar) */
+:root {
+  --banner-h: 0px;
 }
 
-body.banner-dismissed.has-banner {
-  padding-top: 0;
-}
+body.has-banner { padding-top: 0; }
+body.banner-dismissed.has-banner { padding-top: 0; }
 
 img {
   max-width: 100%;
@@ -291,10 +291,8 @@ body.has-banner .lang-toggle {
    Launch offer banner
    ============================================ */
 .launch-banner {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 101;
   background: linear-gradient(90deg, var(--accent) 0%, #e85a2a 100%);
   color: var(--white);
@@ -305,9 +303,7 @@ body.has-banner .lang-toggle {
 }
 
 .launch-banner.is-dismissed {
-  transform: translateY(-100%);
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 
 .launch-banner__inner {
@@ -321,7 +317,6 @@ body.has-banner .lang-toggle {
   position: relative;
   flex-wrap: wrap;
   padding-right: 2.5rem; /* space for dismiss button */
-  padding-top: calc(0.625rem + env(safe-area-inset-top, 0px));
 }
 
 .launch-banner__logo-wrap {
@@ -425,67 +420,19 @@ body.has-banner .lang-toggle {
    Sticky buy bar
    ============================================ */
 .sticky-buy {
-  position: fixed; /* desktop */
-  top: 0;
-  left: 0;
-  right: 0;
+  position: sticky;
+  top: var(--banner-h);
   z-index: 100;
   /* Use opaque background to avoid banner/logo bleed-through */
   background: var(--bg-dark);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border-bottom: 1px solid var(--border);
   transform: none;
   transition: none;
 }
 
-/* On desktop/tablet, keep sticky bar below offer banner */
-body.has-banner .sticky-buy {
-  top: calc(48px + env(safe-area-inset-top, 0px));
-}
-
-/* Mobile/tablet: keep bar in-flow so it can't cover the page */
-@media (max-width: 899px) {
-  .sticky-buy {
-    position: sticky;
-    top: calc(48px + env(safe-area-inset-top, 0px)); /* sits under fixed offer banner */
-    left: auto;
-    right: auto;
-    bottom: auto;
-    transform: none;
-    border-bottom: 1px solid var(--border);
-    border-top: none;
-    padding-bottom: 0;
-  }
-
-  .sticky-buy__inner {
-    flex-direction: row;
-    align-items: center;
-    padding: 0.75rem 1rem;
-  }
-
-  /* sticky-buy__label removed from markup */
-
-  .sticky-buy__buttons {
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 0.75rem;
-  }
-
-  .sticky-buy__buttons .btn {
-    flex: 0 0 auto;
-  }
-
-  main { padding-bottom: 0; }
-}
-
-/* iOS Safari: backdrop-filter can cause fixed/sticky clipping */
-@supports (-webkit-touch-callout: none) {
-  .sticky-buy {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
-}
+main { padding-top: 0; padding-bottom: 0; }
 
 .sticky-buy__inner {
   max-width: 1200px;
