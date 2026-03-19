@@ -6,6 +6,11 @@
 (function () {
   'use strict';
 
+  // Mark JS as available (used for progressive enhancement CSS).
+  try {
+    document.documentElement.classList.add('js');
+  } catch (e) {}
+
   // --- Language toggle (VN default, EN optional) ---
   var LANG_STORAGE_KEY = 'roktips_lang';
   var langToggle = document.getElementById('lang-toggle');
@@ -552,39 +557,7 @@
     document.body.classList.add('has-banner');
   }
 
-  // --- Sticky buy bar ---
-  var stickyBuy = document.getElementById('sticky-buy');
-  var hero = document.getElementById('hero');
-
-  if (stickyBuy && hero) {
-    var heroHeight = hero.offsetHeight;
-    var threshold = Math.min(heroHeight * 0.5, 380);
-
-    function updateStickyBuy() {
-      if (window.scrollY > threshold) {
-        stickyBuy.classList.add('is-visible');
-      } else {
-        stickyBuy.classList.remove('is-visible');
-      }
-    }
-
-    window.addEventListener('scroll', updateStickyBuy, { passive: true });
-    updateStickyBuy();
-  }
-
-  // Keep the sticky bar exactly below the offer banner (prevents overlap)
-  if (launchBanner && stickyBuy) {
-    function positionStickyBuyBelowBanner() {
-      // On mobile the bar is anchored to the bottom, so don't touch `top`.
-      if (!window.matchMedia('(min-width: 768px)').matches) return;
-      var bannerHeight = launchBanner.getBoundingClientRect().height;
-      stickyBuy.style.top = Math.ceil(bannerHeight) + 'px';
-    }
-
-    // Do it on load + resize (banner height can change with responsive layout).
-    positionStickyBuyBelowBanner();
-    window.addEventListener('resize', positionStickyBuyBelowBanner, { passive: true });
-  }
+  // Sticky buy bar is handled by CSS only (no inline positioning).
 
   // --- Video: open YouTube embed in modal ---
   var videoModal = document.getElementById('video-modal');
@@ -692,6 +665,18 @@
   // --- Scroll reveal ---
   var revealSelector = '.reveal';
   var revealElements = document.querySelectorAll(revealSelector);
+
+  // Mobile fallback: if reveal animations don't trigger correctly, ensure content
+  // is visible instead of staying collapsed.
+  try {
+    var isMobileViewport =
+      window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
+    if (isMobileViewport && revealElements && revealElements.length) {
+      revealElements.forEach(function (el) {
+        el.classList.add('is-visible');
+      });
+    }
+  } catch (e) {}
 
   if (revealElements.length && 'IntersectionObserver' in window) {
     var observer = new IntersectionObserver(

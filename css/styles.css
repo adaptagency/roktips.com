@@ -404,10 +404,10 @@ body.has-banner .lang-toggle {
     transform: none;
     width: auto;
     max-width: none;
-    padding: 0 0.5rem 0 0;
+    padding: 0 0.5rem;
     flex: 1;
     min-width: 0;
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -421,10 +421,10 @@ body.has-banner .lang-toggle {
 }
 
 /* ============================================
-   Sticky buy bar (top desktop, bottom mobile)
+   Sticky buy bar
    ============================================ */
 .sticky-buy {
-  position: fixed;
+  position: fixed; /* desktop */
   top: 0;
   left: 0;
   right: 0;
@@ -434,12 +434,8 @@ body.has-banner .lang-toggle {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
-  transform: translateY(0);
-  transition: transform 0.3s ease;
-}
-
-.sticky-buy.is-visible {
-  transform: translateY(0);
+  transform: none;
+  transition: none;
 }
 
 /* On desktop/tablet, keep sticky bar below offer banner */
@@ -447,33 +443,31 @@ body.has-banner .sticky-buy {
   top: 48px;
 }
 
-/* Mobile: floating bar at bottom, full-width buttons */
-@media (max-width: 767px) {
+/* Mobile/tablet: keep bar in-flow so it can't cover the page */
+@media (max-width: 899px) {
   .sticky-buy {
-    top: auto;
-    bottom: 0;
-    transform: translateY(0);
-    border-bottom: none;
-    border-top: 1px solid var(--border);
-    padding-bottom: env(safe-area-inset-bottom, 0);
-  }
-
-  .sticky-buy.is-visible {
-    transform: translateY(0);
+    position: sticky;
+    top: 48px; /* sits under fixed offer banner (body has matching padding) */
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    border-bottom: 1px solid var(--border);
+    border-top: none;
+    padding-bottom: 0;
   }
 
   .sticky-buy__inner {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: center;
     padding: 0.75rem 1rem;
-    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0));
   }
 
   /* sticky-buy__label removed from markup */
 
   .sticky-buy__buttons {
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 0.75rem;
   }
 
@@ -481,9 +475,7 @@ body.has-banner .sticky-buy {
     flex: 0 0 auto;
   }
 
-  main {
-    padding-bottom: 100px; /* space above sticky bar */
-  }
+  main { padding-bottom: 0; }
 }
 
 .sticky-buy__inner {
@@ -515,11 +507,14 @@ body.has-banner .sticky-buy {
    ============================================ */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100vh; /* fallback */
+  min-height: 100svh; /* stable viewport height on mobile */
+  min-height: 100dvh; /* dynamic viewport height when supported */
   display: flex;
   align-items: center;
   padding: var(--section-padding-y-mobile) 0 4rem;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 @media (min-width: 768px) {
@@ -531,6 +526,7 @@ body.has-banner .sticky-buy {
 .hero__bg {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background: radial-gradient(ellipse 80% 60% at 50% 0%, var(--accent-muted) 0%, transparent 50%),
               var(--bg-dark);
   pointer-events: none;
@@ -538,6 +534,7 @@ body.has-banner .sticky-buy {
 
 .hero__container {
   position: relative;
+  z-index: 1;
   display: grid;
   gap: 2.5rem;
   align-items: center;
@@ -656,6 +653,12 @@ body.has-banner .sticky-buy {
   border-radius: 16px;
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
   transition: transform 0.5s ease;
+}
+
+@media (max-width: 767px) {
+  .hero__image {
+    width: min(78vw, 320px);
+  }
 }
 
 .hero__media:hover .hero__image {
@@ -1710,12 +1713,19 @@ body.has-banner .sticky-buy {
    Scroll reveal animation
    ============================================ */
 .reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* Progressive enhancement: only animate/hide when JS is running */
+html.js .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.reveal.is-visible {
+html.js .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
