@@ -1,0 +1,46 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="white"/>
+
+  <!-- R -->
+  <text x="50" y="330"
+        font-family="Arial Black, Arial, Helvetica, sans-serif"
+        font-size="260"
+        fill="#111111">R</text>
+
+  <!-- Ö -->
+  <text x="210" y="330"
+        font-family="Arial Black, Arial, Helvetica, sans-serif"
+        font-size="260"
+        fill="#111111">Ö</text>
+
+  <!-- K -->
+  <text x="370" y="330"
+        font-family="Arial Black, Arial, Helvetica, sans-serif"
+        font-size="260"
+        fill="#111111">K</text>
+
+  <!-- T -->
+  <text x="520" y="330"
+        font-family="Arial Black, Arial, Helvetica, sans-serif"
+        font-size="260"
+        fill="#e10600">T</text>
+
+  <!-- I -->
+  <text x="660" y="330"
+        font-family="Arial Black, Arial, Helvetica, sans-serif"
+        font-size="260"
+        fill="#e10600">I</text>
+
+  <!-- P -->
+  <text x="740" y="330"
+        font-family="Arial Black, Arial, Helvetica, sans-serif"
+        font-size="260"
+        fill="#e10600">P</text>
+
+  <!-- S -->
+  <text x="900" y="330"
+        font-family="Arial Black, Arial, Helvetica, sans-serif"
+        font-size="260"
+        fill="#e10600">S</text>
+
+</svg>
