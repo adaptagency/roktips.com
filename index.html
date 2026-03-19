@@ -10,18 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=4">
 </head>
-<body>
-  <!-- Language toggle -->
-  <div class="lang-toggle" aria-label="Language selector" data-i18n-aria="lang.aria">
-    <span class="lang-toggle__flag" aria-hidden="true" title="Tiếng Việt" data-i18n-title="lang.vnTitle">🇻🇳</span>
-    <label class="lang-toggle__switch">
-      <input type="checkbox" class="lang-toggle__input" id="lang-toggle" aria-label="Toggle language" data-i18n-aria="lang.toggleAria">
-      <span class="lang-toggle__track" aria-hidden="true"></span>
-      <span class="lang-toggle__thumb" aria-hidden="true"></span>
-    </label>
-    <span class="lang-toggle__flag" aria-hidden="true" title="English" data-i18n-title="lang.enTitle">🇬🇧</span>
-  </div>
-
+<body class="has-banner">
   <!-- Offer banner -->
   <div id="launch-banner" class="launch-banner" role="banner">
     <div class="launch-banner__inner">
@@ -38,6 +27,16 @@
     <div class="sticky-buy__inner">
       <div class="sticky-buy__buttons">
         <a href="#cta" class="btn btn--secondary btn--sm" data-i18n="common.buyNow">Buy Now</a>
+        <!-- Language toggle (inside sticky bar) -->
+        <div class="lang-toggle" aria-label="Language selector" data-i18n-aria="lang.aria">
+          <span class="lang-toggle__flag" aria-hidden="true" title="Tiếng Việt" data-i18n-title="lang.vnTitle">🇻🇳</span>
+          <label class="lang-toggle__switch">
+            <input type="checkbox" class="lang-toggle__input" id="lang-toggle" aria-label="Toggle language" data-i18n-aria="lang.toggleAria">
+            <span class="lang-toggle__track" aria-hidden="true"></span>
+            <span class="lang-toggle__thumb" aria-hidden="true"></span>
+          </label>
+          <span class="lang-toggle__flag" aria-hidden="true" title="English" data-i18n-title="lang.enTitle">🇬🇧</span>
+        </div>
       </div>
     </div>
   </aside>
@@ -238,24 +237,42 @@
     <!-- 8. FAQ -->
     <section class="faq" id="faq">
       <div class="container">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Everything you need to know before you buy.</p>
+        <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+        <p class="section-subtitle" data-i18n="faq.subtitle">Everything you need to know before you buy.</p>
         <div class="faq-list">
           <details class="faq-item reveal">
-            <summary class="faq-item__question">Do RokTips fit all fingers?</summary>
-            <p class="faq-item__answer">Yes, they fit most adult fingers.</p>
+            <summary class="faq-item__question" data-i18n="faq.q1">Which musician would benefit from using RÖKTIPS?</summary>
+            <p class="faq-item__answer" data-i18n="faq.a1">
+              RÖKTIPS is primarily targeted at guitarists, but it is also beneficial for players of other string instruments, such as cello, banjo, and violin.
+            </p>
           </details>
+
           <details class="faq-item reveal">
-            <summary class="faq-item__question">How often should I train?</summary>
-            <p class="faq-item__answer">Short sessions are recommended.</p>
+            <summary class="faq-item__question" data-i18n="faq.q2">How often should I use RÖKTIPS each day to see results?</summary>
+            <p class="faq-item__answer" data-i18n="faq.a2">
+              There is no limit to how often you can use RÖKTIPS, but for optimal results, use RÖKTIPS for at least 20-30 minutes daily to help build and maintain fingertip calluses, finger dexterity, and hand muscle strength. For beginners, visible calluses and strength gains in 2-3 weeks.
+            </p>
           </details>
+
           <details class="faq-item reveal">
-            <summary class="faq-item__question">Are they suitable for beginners?</summary>
-            <p class="faq-item__answer">Yes.</p>
+            <summary class="faq-item__question" data-i18n="faq.q3">Is RÖKTIPS suitable for beginners, or is it only for experienced players?</summary>
+            <p class="faq-item__answer" data-i18n="faq.a3">
+              RÖKTIPS is suitable for both beginners and seasoned musicians. It helps beginners build essential physical attributes and helps experienced players maintain their performance endurance.
+            </p>
           </details>
+
           <details class="faq-item reveal">
-            <summary class="faq-item__question">Can experienced guitarists and other string players use them?</summary>
-            <p class="faq-item__answer">Yes, many guitarists and other string players use them for warmups and strength training.</p>
+            <summary class="faq-item__question" data-i18n="faq.q4">Is there a RÖKTIPS for Left-handed players?</summary>
+            <p class="faq-item__answer" data-i18n="faq.a4">
+              A version of RÖKTIPS for left-handed musicians is available but requires a special order, and there may be delays in delivery.
+            </p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary class="faq-item__question" data-i18n="faq.q5">I have a large thumb, and my RÖKTIPS is too small. Can I resize it?</summary>
+            <p class="faq-item__answer" data-i18n="faq.a5">
+              Yes… RÖKTIPS is easy to resize to fit large thumbs. Watch the video below and follow these simple instructions.
+            </p>
           </details>
         </div>
       </div>

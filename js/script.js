@@ -104,6 +104,25 @@
       'comparison.row4.without': 'Dễ bỏ lỡ khi cuộc sống bận rộn',
       'comparison.row4.with': 'Những buổi luyện nhanh phù hợp với công việc, gia đình và lịch diễn',
 
+      // FAQ
+      'faq.title': 'Câu hỏi thường gặp',
+      'faq.subtitle': 'Mọi thứ bạn cần biết trước khi mua.',
+      'faq.q1': 'Nhạc sĩ nào sẽ được lợi khi sử dụng RÖKTIPS?',
+      'faq.a1':
+        'RÖKTIPS chủ yếu dành cho người chơi guitar, nhưng cũng có thể hữu ích cho người chơi các nhạc cụ dây khác như cello, banjo và violin.',
+      'faq.q2': 'Mỗi ngày tôi nên sử dụng RÖKTIPS bao lâu để thấy kết quả?',
+      'faq.a2':
+        'Không có giới hạn về tần suất bạn có thể sử dụng RÖKTIPS, nhưng để đạt hiệu quả tốt nhất, bạn nên sử dụng RÖKTIPS ít nhất 20–30 phút mỗi ngày để giúp xây dựng và duy trì chai tay đầu ngón, độ khéo léo của ngón tay và sức mạnh cơ bắp ở bàn tay. Đối với người mới, bạn có thể thấy chai tay và cải thiện sức mạnh trong 2–3 tuần.',
+      'faq.q3': 'RÖKTIPS có phù hợp cho người mới không, hay chỉ dành cho người chơi có kinh nghiệm?',
+      'faq.a3':
+        'RÖKTIPS phù hợp cho cả người mới và người chơi dày dạn. Nó giúp người mới xây dựng các thuộc tính cơ bản về thể chất và giúp người chơi giàu kinh nghiệm duy trì sức bền khi biểu diễn.',
+      'faq.q4': 'Có RÖKTIPS cho người thuận tay trái không?',
+      'faq.a4':
+        'Có một phiên bản RÖKTIPS dành cho người thuận tay trái, nhưng cần đặt hàng đặc biệt và có thể mất thêm thời gian giao hàng.',
+      'faq.q5': 'Tôi có ngón cái to và RÖKTIPS của tôi bị quá nhỏ. Tôi có thể điều chỉnh kích thước không?',
+      'faq.a5':
+        'Có… RÖKTIPS rất dễ điều chỉnh để vừa với ngón cái to. Xem video bên dưới và làm theo các hướng dẫn đơn giản.',
+
       // Testimonials
       'testimonials.title': 'Được Người Chơi Guitar Yêu Thích',
       'testimonials.subtitle':
@@ -306,6 +325,26 @@
       'comparison.row4.label': 'Consistency',
       'comparison.row4.without': "Easy to skip days when life gets busy",
       'comparison.row4.with': 'Quick sessions that fit around work, family, and gigs',
+
+      // FAQ
+      'faq.title': 'Frequently Asked Questions',
+      'faq.subtitle': 'Everything you need to know before you buy.',
+      'faq.q1': 'Which musician would benefit from using RÖKTIPS?',
+      'faq.a1':
+        'RÖKTIPS is primarily targeted at guitarists, but it is also beneficial for players of other string instruments, such as cello, banjo, and violin.',
+      'faq.q2': 'How often should I use RÖKTIPS each day to see results?',
+      'faq.a2':
+        'There is no limit to how often you can use RÖKTIPS, but for optimal results, use RÖKTIPS for at least 20-30 minutes daily to help build and maintain fingertip calluses, finger dexterity, and hand muscle strength. For beginners, visible calluses and strength gains in 2-3 weeks.',
+      'faq.q3':
+        'Is RÖKTIPS suitable for beginners, or is it only for experienced players?',
+      'faq.a3':
+        'RÖKTIPS is suitable for both beginners and seasoned musicians. It helps beginners build essential physical attributes and helps experienced players maintain their performance endurance.',
+      'faq.q4': 'Is there a RÖKTIPS for Left-handed players?',
+      'faq.a4':
+        'A version of RÖKTIPS for left-handed musicians is available but requires a special order, and there may be delays in delivery.',
+      'faq.q5': 'I have a large thumb, and my RÖKTIPS is too small. Can I resize it?',
+      'faq.a5':
+        'Yes… RÖKTIPS is easy to resize to fit large thumbs. Watch the video below and follow these simple instructions.',
 
       // Testimonials
       'testimonials.title': 'Loved by Everyday Guitarists',
@@ -531,6 +570,20 @@
 
     window.addEventListener('scroll', updateStickyBuy, { passive: true });
     updateStickyBuy();
+  }
+
+  // Keep the sticky bar exactly below the offer banner (prevents overlap)
+  if (launchBanner && stickyBuy) {
+    function positionStickyBuyBelowBanner() {
+      // On mobile the bar is anchored to the bottom, so don't touch `top`.
+      if (!window.matchMedia('(min-width: 768px)').matches) return;
+      var bannerHeight = launchBanner.getBoundingClientRect().height;
+      stickyBuy.style.top = Math.ceil(bannerHeight) + 'px';
+    }
+
+    // Do it on load + resize (banner height can change with responsive layout).
+    positionStickyBuyBelowBanner();
+    window.addEventListener('resize', positionStickyBuyBelowBanner, { passive: true });
   }
 
   // --- Video: open YouTube embed in modal ---
